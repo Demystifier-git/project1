@@ -1,0 +1,49 @@
+*
+  font-family verdana
+  margin 0
+.container
+  max-width unquote("max(700px, 50%)")
+  margin 0 auto
+  padding 32px
+header
+  background-image url("/images/Blog.jpg")
+  background-size cover
+  background-position 0 50%
+  .background-effect
+    background-image linear-gradient(to right, #000, transparent)
+    .container
+      h1
+        color #fff
+        font-size 40px
+section
+  .container
+    form
+      display flex
+      flex-direction column
+      gap 16px
+      div
+        display flex
+        textarea
+          padding 8px
+          flex 1
+          resize vertical
+        textarea[name=title]
+          font-weight bold
+          font-size 32px
+          height 64px
+          min-height 48px
+        textarea[name=body]
+          font-size 16px
+          min-height 256px
+          line-height 24px
+        button
+          padding 16px
+          background-color #000
+          color #fff
+          cursor pointer
+footer
+  background-color #000
+  color #fff
+  .container
+    div:nth-child(1)
+      margin-bottom 16px

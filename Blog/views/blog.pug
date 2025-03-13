@@ -1,0 +1,48 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet", href="/css/blog.css", attr)
+    title= blog.title
+  body
+    header
+      .background-effect
+        .container
+          h1 Blog
+    section.blog-details
+      .container
+        h2= blog.title
+        h3= blog.author
+        p= blog.date.toDateString()
+        p.blog-body= blog.body
+    section.comments-section
+      .container
+        if blog.comments.length > 0
+          h2 Comments
+        each comment in blog.comments
+          .comment-card
+            h3 
+              span= comment.user
+              span.comment-date= ` ${comment.date.toDateString()}`
+            p= comment.comment
+            .engagement-section
+              button
+                img.icon(src="/icons/like.png" alt="likes icon")
+                span= comment.likes
+              button
+                img.icon(src="/icons/reply.png" alt="reply icon")
+                span= comment.replies.length
+            each reply in comment.replies
+              section.replies-section
+                h4 
+                  span= reply.user
+                  span.reply-date= ` ${reply.date.toDateString()}`
+                p= reply.reply
+                .engagement-section
+                  button
+                    img.icon(src="/icons/like.png" alt="likes icon")
+                    span= reply.likes
+    footer
+      .container
+        div &copy; 2025, Obaro.

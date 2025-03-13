@@ -1,0 +1,49 @@
+* {
+  font-family: verdana;
+  margin: 0;
+}
+.container {
+  max-width: max(700px, 50%);
+  margin: 0 auto;
+  padding: 32px;
+}
+header {
+  background-image: url("/images/Blog.jpg");
+  background-size: cover;
+  background-position: 0 50%;
+}
+header .background-effect {
+  background-image: linear-gradient(to right, #000, transparent);
+}
+header .background-effect .container h1 {
+  color: #fff;
+  font-size: 40px;
+}
+section .container .info {
+  color: #f00;
+  margin-bottom: 16px;
+}
+section .container form div {
+  display: flex;
+  width: 400px;
+}
+section .container form div input {
+  flex: 1;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+section .container form div button {
+  flex: 1;
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+footer {
+  background-color: #000;
+}
+footer .container p {
+  color: #fff;
+}

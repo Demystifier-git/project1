@@ -1,0 +1,26 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet" href="/css/post.css")
+    title Add Blog
+  body
+    header
+      .background-effect
+        .container
+          h1 Add Blog
+    section
+      .container
+        form(action="/create" method="post")
+          div
+            textarea(name="title", placeholder="Blog Title")
+          div
+            textarea(name="body", placeholder="Blog Body")
+          div
+            button(type="submit") Post
+    footer
+      .container
+        div Built with love by 
+          b Obaro
+        div &copy; 2025.

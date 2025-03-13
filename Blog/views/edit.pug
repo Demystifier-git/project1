@@ -1,0 +1,28 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet" href="/css/edit.css")
+    title= blog.title
+  body
+    header
+      .background-effect
+        .container
+          h1 Edit Blog
+    section
+      .container
+        form(action="/edit" method="post")
+          div
+            textarea(name="title" placeholder="Blog Title")= blog.title
+          div
+            textarea(name="body" placeholder="Blog Body")= blog.body
+          div
+            button(type="submit") Update
+          div
+            input(type="hidden" name="id" value=`${blog._id.toString()}`)
+    footer
+      .container
+        div Built with love by 
+          b Obaro
+        div &copy; 2025.

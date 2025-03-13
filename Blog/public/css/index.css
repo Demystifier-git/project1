@@ -1,0 +1,112 @@
+* {
+  font-family: verdana;
+  margin: 0;
+}
+body {
+  background-color: #eee;
+}
+section {
+  padding: 0 32px;
+}
+footer,
+header .container {
+  padding: 32px;
+}
+header {
+  color: #fff;
+  background-image: url("/images/Blog.jpg");
+  background-size: cover;
+  background-position: 0 50%;
+}
+header .background-effect {
+  background-image: linear-gradient(to right, #000, transparent);
+  height: 100%;
+}
+header .background-effect .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .background-effect .container h1 {
+  font-size: 48px;
+}
+header .background-effect .container nav a {
+  text-decoration: none;
+  color: #fff;
+}
+header .background-effect .container nav a:hover {
+  color: #eee;
+}
+.admin-section .container a {
+  padding: 16px;
+  cursor: pointer;
+  color: #000;
+}
+.admin-section .container a:hover {
+  box-shadow: 0 0 16px #ccc;
+  background-color: #fff;
+}
+.admin-section .container a img {
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.admin-section .container a img:hover {
+  transform: scale(1.2);
+}
+.admin-section .container a span {
+  font-size: 16px;
+}
+footer {
+  background-color: #000;
+  color: #fff;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.container h2 {
+  margin: 32px 0;
+}
+.blog-card {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 48px;
+}
+.blog-card p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 16px 0;
+}
+.blog-card .blog-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-card .blog-footer .link-box {
+  display: flex;
+  gap: 16px;
+}
+.blog-card .blog-footer .link-box a img {
+  width: 24px;
+}
+.blog-card .blog-footer .link-box a img:hover {
+  transform: scale(1.2);
+}
+.blog-card .blog-footer .link-box a img:nth-child(2) {
+  margin-left: 8px;
+}
+footer .container div:nth-child(1) {
+  margin-bottom: 32px;
+}
+section .container a {
+  text-decoration: none;
+  color: #555;
+}
+section .container .blog-card:hover {
+  box-shadow: 0 0 16px #ccc;
+}
+.no-blog {
+  margin-bottom: 16px;
+  margin-left: 16px;
+}

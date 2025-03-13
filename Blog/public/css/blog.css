@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  font-family: verdana;
+}
+.container {
+  max-width: max(700px, 50%);
+  margin: 0 auto;
+  padding: 32px;
+}
+.background-effect {
+  background-image: linear-gradient(to right, #000, transparent);
+}
+header {
+  background-image: url("/images/Blog.jpg");
+  background-size: cover;
+  background-position: 0 50%;
+}
+header h1 {
+  color: #fff;
+  font-size: 56px;
+}
+.blog-details .container * {
+  margin-bottom: 16px;
+}
+.blog-details .container h2 {
+  font-size: 40px;
+}
+.blog-details .container p.blog-body {
+  line-height: 32px;
+  text-indent: 32px;
+}
+.comments-section .container h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.comment-card {
+  margin: 0 32px;
+  margin-bottom: 40px;
+}
+.comment-date,
+.reply-date {
+  font-weight: normal;
+  font-size: 12px;
+}
+.comment-card>p {
+  margin: 16px 0;
+}
+.engagement-section {
+  display: flex;
+  gap: 8px;
+}
+.icon {
+  width: 24px;
+}
+.replies-section {
+  margin-left: 32px;
+  margin-top: 16px;
+}
+.replies-section p {
+  margin: 16px 0;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+button img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+footer {
+  background-color: #000;
+  color: #fff;
+}
+footer .container {
+  padding: 48px 32px;
+}

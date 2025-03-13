@@ -1,0 +1,26 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet" href="/css/log-in.css")
+    title Blog
+  body
+    header
+      .background-effect
+        .container
+          h1 Blog
+    section
+      .container
+        if message
+          .info= message
+        form(action="/login" method="post")
+          div
+            input(type="text" name="username" placeholder="Username")
+          div
+            input(type="password" name="password" placeholder="Password")
+          div
+            button(type="submit") Login
+    footer
+      .container
+        p &copy; Obaro, 2025.

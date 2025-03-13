@@ -1,0 +1,54 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="stylesheet" href="css/index.css")
+    title Blog
+  body
+    header
+      .background-effect
+        .container
+          h1 Blog
+          nav
+            if user == "admin"
+              a(href="/logout") Log out
+            else
+              a(href="/login") Log in
+    if user == "admin"
+      section.admin-section
+        .container
+          h2 Create blog post
+          a(href="/create")
+            img(src="/icons/plus.png" alt="plus icon")
+            span create
+    section
+      .container
+        if blogs.length > 0
+          h2 Latest blogs
+        else
+          h2.no-blog No Blogs
+        each blog in blogs
+          .blog-card
+            a(href=`blog/${blog._id.toString()}`)
+              h3= `${blog.title}`
+              p= `${blog.body}`
+            span.blog-footer
+              if user == "admin"
+                span.link-box
+                  a(href=`/delete/${blog._id.toString()}`)
+                    img(src="/icons/delete.png", alt="delete icon")
+                  a(href=`/edit/${blog._id.toString()}`)
+                    img(src="/icons/edit.png", alt="edit icon")
+              span.detail-box
+                i
+                  b= `${blog.author}`
+                i= ` ${blog.date.toLocaleDateString()}`
+    footer
+      .container
+        div Built with love by 
+          b Obaro
+        div &copy; 2025.
+    if user == "admin"
+      script(src="/lib/jquery-3.7.1.min.js")
+      script(src="/scripts/index.js")
